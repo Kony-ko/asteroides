@@ -33,6 +33,14 @@ public class Asteroides extends Activity {
 				});
 
 		//TODO 02: Capturar el evento onClick del botón "Jugar" y llamar al método lanzarJuego
+		// Se añade otro escuchador para el evento onClick del botón "Jugar"
+				((Button) findViewById(R.id.btnJugar))
+						.setOnClickListener(new OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								lanzarJuego(v);
+							}
+						});
 	}
 
 	@Override
