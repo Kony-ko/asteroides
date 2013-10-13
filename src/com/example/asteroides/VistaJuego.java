@@ -184,16 +184,16 @@ public class VistaJuego extends View {
 		// giroNave y aceleracionNave (según la entrada del jugador)
 
 		// TODO 11: Actualizar posicion de la nave
-//		nave.setAngulo((int) (nave.getAngulo() + giroNave * retardo));
-//		double nIncX = nave.getIncX() + aceleracionNave
-//				* Math.cos(Math.toRadians(nave.getAngulo())) * retardo;
-//		double nIncY = nave.getIncY() + aceleracionNave
-//				* Math.sin(Math.toRadians(nave.getAngulo())) * retardo;
-//		// Actualizamos si el módulo de la velocidad no excede el máximo
-//		if (Math.hypot(nIncX, nIncY) <= MAX_VELOCIDAD_NAVE) {
-//			nave.setIncX(nIncX);
-//			nave.setIncY(nIncY);
-//		}
+		nave.setAngulo((int) (nave.getAngulo() + giroNave * retardo));
+		double nIncX = nave.getIncX() + aceleracionNave
+				* Math.cos(Math.toRadians(nave.getAngulo())) * retardo;
+		double nIncY = nave.getIncY() + aceleracionNave
+				* Math.sin(Math.toRadians(nave.getAngulo())) * retardo;
+		// Actualizamos si el módulo de la velocidad no excede el máximo
+		if (Math.hypot(nIncX, nIncY) <= MAX_VELOCIDAD_NAVE) {
+			nave.setIncX(nIncX);
+			nave.setIncY(nIncY);
+		}
 		// Actualizamos posiciones X e Y
 		
 		// TODO 12: Incrementar posición nave
