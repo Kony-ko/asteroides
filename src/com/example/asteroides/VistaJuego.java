@@ -111,7 +111,13 @@ public class VistaJuego extends View {
 			drawableNave = dNave;
 			
 			// TODO 19: Crear Crear el path y el drawable misil
-
+			ShapeDrawable dMisil = new ShapeDrawable(new RectShape());
+			dMisil.getPaint().setColor(Color.WHITE);
+			dMisil.getPaint().setStyle(Style.STROKE);
+			dMisil.setIntrinsicWidth(15);
+			dMisil.setIntrinsicHeight(3);
+			drawableMisil = dMisil;
+			
 			setBackgroundColor(Color.BLACK);
 		} else { // Gráficos por bitmap
 			drawableAsteroide[0] = context.getResources().getDrawable(
