@@ -254,18 +254,18 @@ public class VistaJuego extends View {
 	private void ActivaMisil() {
 
 		// TODO 17: Activar misil
-//		misil = new Grafico(this, drawableMisil);
-//		misil.setCenX(nave.getCenX());
-//		misil.setCenY(nave.getCenY());
-//		misil.setAngulo(nave.getAngulo());
-//		misil.setIncX(Math.cos(Math.toRadians(misil.getAngulo()))
-//				* PASO_VELOCIDAD_MISIL);
-//		misil.setIncY(Math.sin(Math.toRadians(misil.getAngulo()))
-//				* PASO_VELOCIDAD_MISIL);
-//		
-//		tiempoMisil = (int) Math.min(
-//				this.getWidth() / Math.abs(misil.getIncX()), this.getHeight()
-//				/ Math.abs(misil.getIncY())) - 2;
+		misil = new Grafico(this, drawableMisil);
+		misil.setCenX(nave.getCenX());
+		misil.setCenY(nave.getCenY());
+		misil.setAngulo(nave.getAngulo());
+		misil.setIncX(Math.cos(Math.toRadians(misil.getAngulo()))
+				* PASO_VELOCIDAD_MISIL);
+		misil.setIncY(Math.sin(Math.toRadians(misil.getAngulo()))
+				* PASO_VELOCIDAD_MISIL);
+		
+		tiempoMisil = (int) Math.min(
+				this.getWidth() / Math.abs(misil.getIncX()), this.getHeight()
+				/ Math.abs(misil.getIncY())) - 2;
 
 	}
 
