@@ -60,7 +60,7 @@ public class VistaJuego extends View {
 
 	public VistaJuego(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		Drawable drawableNave;
+		Drawable drawableNave = null;
 
 		// Obtenemos el valor de las opciones
 		SharedPreferences pref = context.getSharedPreferences(
@@ -126,6 +126,7 @@ public class VistaJuego extends View {
 		}
 
 		// TODO 08: Crear el objeto Gráfico para la nave
+		nave = new Grafico(this, drawableNave);
 
 
 	}
