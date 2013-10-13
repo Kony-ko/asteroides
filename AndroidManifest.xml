@@ -39,6 +39,11 @@
       	android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
       --> 
       
+      <activity
+         android:name="Juego">
+      </activity>
+      
+      
    </application>
 
 </manifest>
