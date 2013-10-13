@@ -23,8 +23,16 @@ public class Asteroides extends Activity {
 		setContentView(R.layout.main);
 
 		//TODO 01: Capturar el evento onClick del botón "Opciones" y llamar al método lanzarPreferencias
+		// Se añade otro escuchador para el evento onClick del botón "Opciones"
+		((Button) findViewById(R.id.btnConfigurar))
+				.setOnClickListener(new OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						lanzarPreferencias(v);
+					}
+				});
 
-		//TODO 02: Capturar el evento onClick del botón "Jugar" y llamar al método lanzarPreferencias
+		//TODO 02: Capturar el evento onClick del botón "Jugar" y llamar al método lanzarJuego
 	}
 
 	@Override
