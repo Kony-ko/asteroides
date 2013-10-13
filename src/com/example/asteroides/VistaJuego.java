@@ -113,6 +113,8 @@ public class VistaJuego extends View {
 			drawableNave = context.getResources().getDrawable(R.drawable.nave);
 
 			// TODO 15: Asignar las drawable para el misil
+			drawableMisil = context.getResources().getDrawable(
+					R.drawable.misil1);
 		}
 
 		asteroides = new Vector<Grafico>();
