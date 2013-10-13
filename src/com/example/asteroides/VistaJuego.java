@@ -95,9 +95,9 @@ public class VistaJuego extends View {
 				dAsteroide.setIntrinsicHeight(50 - i * 14);
 				drawableAsteroide[i] = dAsteroide;
 			}
-			
+
 			// TODO 18: Crear el path y el drawable para la nave
-			
+
 			// TODO 19: Crear Crear el path y el drawable misil
 
 			setBackgroundColor(Color.BLACK);
@@ -139,11 +139,11 @@ public class VistaJuego extends View {
 		super.onSizeChanged(ancho, alto, ancho_anter, alto_anter);
 
 		// Una vez que conocemos nuestro ancho y alto.
-		
+
 		// TODO 09: Asignar el tamaño a la nave 
 		nave.setCenX((ancho - nave.getAncho()) / 2);
 		nave.setCenY((alto - nave.getAlto()) / 2);
-		
+
 		for (Grafico asteroide : asteroides) {
 			// TODO 14: Hacer que no se pinten asteroides sobre la nave
 			do {
@@ -164,13 +164,14 @@ public class VistaJuego extends View {
 
 		// TODO 10: Pintar nave
 		nave.dibujaGrafico(canvas);
-		
+
 		for (Grafico asteroide : asteroides) {
 			asteroide.dibujaGrafico(canvas);
 		}
 
 		// TODO 16: Pintar misil
-		misil.dibujaGrafico(canvas);
+		if (misil != null)
+			misil.dibujaGrafico(canvas);
 
 	}
 
@@ -198,25 +199,28 @@ public class VistaJuego extends View {
 			nave.setIncY(nIncY);
 		}
 		// Actualizamos posiciones X e Y
-		
+
 		// TODO 12: Incrementar posición nave
 		nave.incrementaPos(retardo);
-		
+
 		for (Grafico asteroide : asteroides) {
 			asteroide.incrementaPos(retardo);
 		}
-		
+
 		// Actualizamos posición de misil
-//		misil.incrementaPos(retardo);
-//		tiempoMisil -= retardo;
-//		if (tiempoMisil >= 0) {
-//			for (int j = 0; j < asteroides.size(); j++) {
-//				if (misil.verificaColision(asteroides.elementAt(j))) {
-//					destruyeAsteroide(j);
-//					break;
-//				}
-//			}
-//		}
+		if (misil != null) {
+			misil.incrementaPos(retardo);
+			tiempoMisil -= retardo;
+			if (tiempoMisil >= 0) {
+				for (int j = 0; j < asteroides.size(); j++) {
+					if (misil.verificaColision(asteroides.elementAt(j))) {
+						destruyeAsteroide(j);
+						misil = null;
+						break;
+					}
+				}
+			}
+		}
 
 		// TODO 13: Verificar colision asteroide-nave
 		for (Grafico asteroide : asteroides) {
@@ -262,7 +266,7 @@ public class VistaJuego extends View {
 				* PASO_VELOCIDAD_MISIL);
 		misil.setIncY(Math.sin(Math.toRadians(misil.getAngulo()))
 				* PASO_VELOCIDAD_MISIL);
-		
+
 		tiempoMisil = (int) Math.min(
 				this.getWidth() / Math.abs(misil.getIncX()), this.getHeight()
 				/ Math.abs(misil.getIncY())) - 2;
@@ -273,7 +277,7 @@ public class VistaJuego extends View {
 	@Override
 	public boolean onKeyDown(int codigoTecla, KeyEvent evento) {
 		super.onKeyDown(codigoTecla, evento);
-		
+
 		// Suponemos que vamos a procesar la pulsación
 		boolean procesada = true;
 		switch (codigoTecla) {
@@ -301,7 +305,7 @@ public class VistaJuego extends View {
 	@Override
 	public boolean onKeyUp(int codigoTecla, KeyEvent evento) {
 		super.onKeyUp(codigoTecla, evento);
-		
+
 		// Suponemos que vamos a procesar la pulsación
 		boolean procesada = true;
 		switch (codigoTecla) {
@@ -323,7 +327,7 @@ public class VistaJuego extends View {
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		super.onTouchEvent(event);
-		
+
 		float x = event.getX();
 		float y = event.getY();
 		switch (event.getAction()) {
@@ -364,7 +368,7 @@ public class VistaJuego extends View {
 
 	// Thread para pintar cada X segundos
 	class ThreadJuego extends Thread {
-		
+
 		private boolean pausa, corriendo;
 
 		public synchronized void pausar() {
@@ -402,8 +406,8 @@ public class VistaJuego extends View {
 	public ThreadJuego getThread() {
 		return thread;
 	}
-	
-	
+
+
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	private void desactivarAceleracionHardware() {
 		if (android.os.Build.VERSION.SDK_INT >= 11) {
