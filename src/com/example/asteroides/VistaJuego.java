@@ -161,6 +161,7 @@ public class VistaJuego extends View {
 		super.onDraw(canvas);
 
 		// TODO 10: Pintar nave
+		nave.dibujaGrafico(canvas);
 		
 		for (Grafico asteroide : asteroides) {
 			asteroide.dibujaGrafico(canvas);
