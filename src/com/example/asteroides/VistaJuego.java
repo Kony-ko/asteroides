@@ -139,8 +139,8 @@ public class VistaJuego extends View {
 		// Una vez que conocemos nuestro ancho y alto.
 		
 		// TODO 09: Asignar el tamaño a la nave 
-		// cenX = (ancho - nave.getAncho()) / 2
-		// cenY = (alto - nave.getAlto()) / 2
+		nave.setCenX((ancho - nave.getAncho()) / 2);
+		nave.setCenY((alto - nave.getAlto()) / 2);
 		
 		for (Grafico asteroide : asteroides) {
 			// TODO 14: Hacer que no se pinten asteroides sobre la nave
