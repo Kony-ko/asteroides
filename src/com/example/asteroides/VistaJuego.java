@@ -216,6 +216,11 @@ public class VistaJuego extends View {
 //		}
 
 		// TODO 13: Verificar colision asteroide-nave
+		for (Grafico asteroide : asteroides) {
+			if (asteroide.verificaColision(nave)) {
+				salir();
+			}
+		}
 
 	}
 
