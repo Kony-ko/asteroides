@@ -15,6 +15,7 @@ public class Juego extends Activity {
 		setContentView(R.layout.juego);
 		
 		// TODO 05: Asignar la view vistajuegos
+		vistaJuego = (VistaJuego) findViewById(R.id.VistaJuego);
 	}
 
 	@Override protected void onPause() {
