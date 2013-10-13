@@ -34,9 +34,10 @@ class Grafico {
 		drawable.setBounds(x, y, x + ancho, y + alto);
 		
 		// TODO 06: Activar el save y restore del canvas
-		
+		canvas.save();
 		canvas.rotate((float) angulo, cenX, cenY);
 		drawable.draw(canvas);
+		canvas.restore();
 
 		view.invalidate(cenX - radioInval, cenY - radioInval,
 				cenX + radioInval, cenY + radioInval);
