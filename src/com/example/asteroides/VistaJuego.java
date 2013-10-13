@@ -144,12 +144,12 @@ public class VistaJuego extends View {
 		
 		for (Grafico asteroide : asteroides) {
 			// TODO 14: Hacer que no se pinten asteroides sobre la nave
-//			do {
+			do {
 				asteroide.setCenX((int) (Math.random() * (ancho - asteroide
 						.getAncho())));
 				asteroide.setCenY((int) (Math.random() * (alto - asteroide
 						.getAlto())));
-//			} while (asteroide.distancia(nave) < (ancho + alto) / 5);
+			} while (asteroide.distancia(nave) < (ancho + alto) / 5);
 		}
 
 		ultimoProceso = System.currentTimeMillis();
