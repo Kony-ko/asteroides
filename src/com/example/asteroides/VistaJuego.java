@@ -197,7 +197,8 @@ public class VistaJuego extends View {
 		// Actualizamos posiciones X e Y
 		
 		// TODO 12: Incrementar posición nave
-
+		nave.incrementaPos(retardo);
+		
 		for (Grafico asteroide : asteroides) {
 			asteroide.incrementaPos(retardo);
 		}
