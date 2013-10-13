@@ -170,6 +170,7 @@ public class VistaJuego extends View {
 		}
 
 		// TODO 16: Pintar misil
+		misil.dibujaGrafico(canvas);
 
 	}
 
