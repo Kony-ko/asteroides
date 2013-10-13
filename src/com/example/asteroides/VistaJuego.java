@@ -97,7 +97,19 @@ public class VistaJuego extends View {
 			}
 
 			// TODO 18: Crear el path y el drawable para la nave
-
+			Path pathNave = new Path();
+			pathNave.moveTo((float) 0.0, (float) 0.0);
+			pathNave.lineTo((float) 1.0, (float) 0.5);
+			pathNave.lineTo((float) 0.0, (float) 1.0);
+			pathNave.lineTo((float) 0.0, (float) 0.0);
+			
+			ShapeDrawable dNave = new ShapeDrawable(new PathShape(pathNave, 1, 1));
+			dNave.getPaint().setColor(Color.WHITE);
+			dNave.getPaint().setStyle(Style.STROKE);
+			dNave.setIntrinsicWidth(20);
+			dNave.setIntrinsicHeight(15);
+			drawableNave = dNave;
+			
 			// TODO 19: Crear Crear el path y el drawable misil
 
 			setBackgroundColor(Color.BLACK);
