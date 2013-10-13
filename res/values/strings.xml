@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string name="app_name">Asteroides</string>
+   <string name="menu_settings">Configuración</string>
+   <string name="nombreJuego">Asteroides</string>
+   <string name="btnJugar">Jugar</string>
+   <string name="btnConfigurar">Opciones</string>
+   <string name="textoAcercaDe">Juego realizado como ejemplo en el curso de programación de aplicaciones Android en MiríadaX.</string>
+   <string name="prefGraficosTitulo">Tipo de gráficos</string>
+   <string name="prefGraficosResumen">Se escoge la representación de gráficos</string>
+   <string name="prefFragmentosTitulo">Número de fragmentos</string>
+   <string name="prefFragmentosResumen">En cuántos trozos se divide un asteroide</string>
+   <string name="prefAsteroidesTitulo">Número de asteroides</string>
+   <string name="prefAsteroidesResumen">Cuantos asteroide se muestran de inicio</string>
+</resources>

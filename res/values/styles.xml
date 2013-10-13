@@ -1,0 +1,83 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+   -->
+   <style name="AppBaseTheme" parent="android:Theme.Light">
+      <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+      -->
+   </style>
+
+   <!-- Application theme. -->
+   <style name="AppTheme" parent="AppBaseTheme">
+      <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+   </style>
+
+   <style name="layoutPortada">
+      <item name="android:padding">30dp</item>
+      <item name="android:background">@drawable/degradado</item>
+   </style>
+
+   <style name="TextoAsteroides">
+      <item name="android:textSize">@dimen/Titulo</item>
+      <item name="android:gravity">center_horizontal</item>
+      <item name="android:typeface">sans</item>
+      <item name="android:textColor">@color/colorTitulo</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:textColor">@color/colorTextoBotones</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones.Land">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_width">0dp</item>
+      <item name="android:layout_weight">1</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones.Large">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_marginLeft">100dp</item>
+      <item name="android:layout_marginRight">100dp</item>
+      <item name="android:layout_marginTop">15dp</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones.Large.Land">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_width">0dp</item>
+      <item name="android:layout_weight">1</item>
+      <item name="android:layout_marginLeft">20dp</item>
+      <item name="android:layout_marginRight">20dp</item>
+      <item name="android:layout_marginTop">10dp</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones.XLarge">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_marginLeft">200dp</item>
+      <item name="android:layout_marginRight">200dp</item>
+      <item name="android:layout_marginTop">10dp</item>
+   </style>
+
+   <style name="TextoAsteroides.Botones.XLarge.Land">
+      <item name="android:textSize">@dimen/textoBotones</item>
+      <item name="android:gravity">center</item>
+      <item name="android:layout_width">0dp</item>
+      <item name="android:layout_weight">1</item>
+      <item name="android:layout_marginLeft">50dp</item>
+      <item name="android:layout_marginRight">50dp</item>
+      <item name="android:layout_marginTop">30dp</item>
+   </style>
+   
+   <style name="temaAsteroides" parent="@android:style/Theme.NoTitleBar"></style>
+
+</resources>

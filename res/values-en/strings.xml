@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <string name="app_name">Asteroids</string>
+   <string name="menu_settings">Settings</string>
+   <string name="nombreJuego">Asteroids</string>
+   <string name="btnJugar">Play</string>
+   <string name="btnConfigurar">Settings</string>
+   <string name="textoAcercaDe">This game is an example for the Android application programming course in MiríadaX.</string>
+   <string name="prefGraficosTitulo">Graphics Type</string>
+   <string name="prefGraficosResumen">Select the graphic drawing style</string>
+   <string name="prefFragmentosTitulo">Fragment number</string>
+   <string name="prefFragmentosResumen">How many pieces is divided an asteroid</string>
+   
+</resources>
